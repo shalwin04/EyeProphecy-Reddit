@@ -30,15 +30,15 @@ export const Game: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const prophecies = [
-    "Your USB cable will always be upside down on the first try. Forever.",
-    "The person in front of you will walk exactly 0.5 mph slower than your natural pace.",
-    "Your phone battery will die at 23% for the rest of your life.",
-    "Every shopping cart you touch will have exactly one wobbly wheel.",
-    "Your socks will develop holes in the exact spot where your big toe lives.",
-    "The socks know everything. Especially your secrets.",
+    'Your USB cable will always be upside down on the first try. Forever.',
+    'The person in front of you will walk exactly 0.5 mph slower than your natural pace.',
+    'Your phone battery will die at 23% for the rest of your life.',
+    'Every shopping cart you touch will have exactly one wobbly wheel.',
+    'Your socks will develop holes in the exact spot where your big toe lives.',
+    'The socks know everything. Especially your secrets.',
     "Your reflection has been practicing faces when you're not looking.",
-    "Somewhere, a rubber duck is plotting your downfall.",
-    "The last slice of pizza holds the meaning of life, but you'll never eat it."
+    'Somewhere, a rubber duck is plotting your downfall.',
+    "The last slice of pizza holds the meaning of life, but you'll never eat it.",
   ];
   const [showNetCursor, setShowNetCursor] = useState(false);
   const [draggedFly, setDraggedFly] = useState(false);
@@ -136,7 +136,7 @@ export const Game: React.FC = () => {
   const getCurrentInstruction = () => {
     switch (gameStage) {
       case 'sleeping':
-        return 'Rub His Eyes to Wake Him';
+        return 'Click His Eyes to Wake Him';
       case 'awakening':
         return 'The Oracle Has Awakened...';
       case 'fly-hunting':
@@ -267,7 +267,7 @@ export const Game: React.FC = () => {
 
       {/* Debug Info */}
       <div className="absolute top-4 left-4 text-xs text-white opacity-50">
-        Stage: {gameStage} | Rubs: {rubCount}
+        Stage: {gameStage} | Pokes: {rubCount}
       </div>
     </div>
   );
